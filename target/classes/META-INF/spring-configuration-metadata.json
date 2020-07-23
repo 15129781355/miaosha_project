@@ -1,0 +1,22 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.miaoshaproject.dataobject.Student",
+      "name": "student",
+      "type": "com.miaoshaproject.dataobject.Student"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.miaoshaproject.dataobject.Student",
+      "name": "student.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.miaoshaproject.dataobject.Student",
+      "name": "student.name",
+      "type": "java.lang.String"
+    }
+  ]
+}

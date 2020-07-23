@@ -1,0 +1,39 @@
+ps -ef | grep java
+pstree -p pid | wc -l
+top -H
+ps：load 1核小于1代表正常，大于1说明高负载阻塞很多；2核应该是小于2
+    us，sy分别为用户态和内核态的cpu使用量，free和used分别为空闲内存和已经使用内存
+
+
+redis安装后进行make，需要绑定在自己私网地址
+启动服务 src/redis-server ./redis.config &
+
+
+
+scp -r /var/www root@内网:/var      会输入密码！！！
+ssh root@内网
+yum install telnet
+
+
+
+chmod -R 777 xxx.rpm
+tar -xvzf xxx.tar.gz
+
+
+数据库启动命令：systemctl start mariadb.service
+grant all privileges on *.* to root@'%' identified by '123456';
+flush privileges;
+
+
+
+安装nginx--  tar -xvzf xxx.tar.gz
+yum install pcre-devel openssl-devel gcc curl
+./configure
+make  编译
+make install  会安装在/usr/local/xxx下
+sbin/nginx -c conf/nginx.conf 启动
+sbin/nginx -s reload 修改配置后重启
+静态资源放入html文件夹下
+配置路由规则--命中/resources的在nginx静态服务器，没有命中在动态服务器上
+配置反向代理--配置局域网地址
+配置nginx和java进行长连接（设置http-version，connection-close）
